@@ -53,7 +53,6 @@ const OnBoarding = ({ data, onPressSkip }) => {
                       onPressSkip()
                     }
                   })}
-                  color={e.colortexto}
                 />
 
               ) : null}
