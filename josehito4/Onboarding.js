@@ -3,65 +3,66 @@ import VistaOnboard from './src/Components/OnboardingFactory';
 
 const OnBoarding = ({ data, onPressSkip }) => {
   const [actual, setActual] = useState(0);
-  const [info, setInfo] = useState(null);
-
+  const [datos, setDatos] = useState(null);
   useEffect(() => {
-    const array = [];
-    let aux = 0;
+    var arreglo = [];
+    var aux = 0;
     data.forEach(e => {
-      // console.log(e)
-      const core = e;
-      core.id = aux;
-      aux = aux + 1;
-      array.push(core);
+      var informacion = e;
+      informacion.id = aux;
+      aux += 1;
+      arreglo.push(informacion);
     });
-    setInfo(array);
-
+    setDatos(arreglo);
   }, []);
+  function recorrerPantallas(){
+    datos.map(pantalla =>
+        return cargarComponente(pantalla)
+    )
+  }
+  function cargarComponente(pantalla){
 
-
+      if(pantalla.id == actual)
+      return (
+        <VistaOnboard
+          source={pantalla.img}
+          titulo={pantalla.titulo}
+          contenido={pantalla.descripcion}
+          onPressPrev={(() => {
+            if(pantalla.id==0){
+              onPressSkip();
+            }
+            else if (pantalla.id > 0){
+              setActual(pantalla.id - 1);
+            }
+            })}
+          onPressNext={(() => {
+            if (pantalla.id < datos.length - 1) {
+              setActual(pantalla.id + 1);
+            }
+            else {
+              onPressSkip()
+            }
+          })}
+        />
+      )
+  }
+  function generarOnboarding(){
+    if(datos)
+    {
+      return (
+        <>
+          {
+            recorrerPantallas()
+          }
+        </>
+      )
+    }
+  }
   return (
     <>
-      {info ? (
-        <>
-          {info.map(e => (
-            <>
-
-              {e.id == actual ? (
-
-                <VistaOnboard
-                  source={e.img}
-                  titulo={e.titulo}
-                  contenido={e.descripcion}
-                  onPressPrev={(() => {
-                    if(e.id==0){
-                      onPressSkip();
-
-                    }
-                    else if (e.id > 0){
-                      setActual(e.id - 1);
-                    }
-
-
-                    })}
-
-                  onPressNext={(() => {
-                    if (e.id < info.length - 1) {
-                      setActual(e.id + 1);
-                    }
-                    else {
-                      onPressSkip()
-                    }
-                  })}
-                />
-
-              ) : null}
-            </>
-          ))}
-        </>
-      ) : null}
+      {generarOnboarding()}
     </>
-
   );
 };
 
