@@ -10,6 +10,7 @@ import Button from '../../Components/login/Button';
 import Images from '../../Config/Images';
 import Constants from '../../Config/Constants';
 
+
 export default class Pruebas extends Component {
 constructor(props){
   super(props);
@@ -23,6 +24,23 @@ constructor(props){
   };
 // Para actualizar this.setState( {atributo: "valor"} )
 }
+
+  const Autentificacion = ()=>{
+    try {
+     FirebasePlugin.auth()
+       .createUserWithEmailAndPassword(correo, contra)
+       .then((user) => {
+         Alert.alert('Correcto', 'Docente Registrado'}
+         }]);
+       })
+       .catch((error) => {
+         Alert.alert('Invalid Values', error.message);
+       });
+   } catch (error) {
+     Alert.alert('Invalid Values', error.message);
+   }
+  }
+
   render()
   {
     return (
@@ -128,7 +146,7 @@ constructor(props){
 
           docentefire.set(this.state)
             .then(function () {
-              Alert.alert('USER ID creado:', docentefire.id);
+              ()=>{Autentificacion()}
             })
             .catch(function (error) {
               Alert.alert('Error al crear', error.message);
