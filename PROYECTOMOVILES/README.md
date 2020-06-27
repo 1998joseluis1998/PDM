@@ -113,7 +113,7 @@ Entonces tenemos como captura la creación de usuarios en FireBase:
 ```
 
 
-![View6](./assets/firebase.jpeg) 
+![View7](./assets/firebase.jpeg) 
 
 
 ## Version
