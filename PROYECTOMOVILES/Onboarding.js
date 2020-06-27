@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import VistaOnboard from './src/Components/OnboardingFactory';
+import VistaOnboard from './src/Components/Onboarding/OnboardingFactory';
 
 const OnBoarding = ({ data, onPressSkip }) => {
   const [actual, setActual] = useState(0);
