@@ -8,7 +8,10 @@ import Onboarding from '../../onboardingapp';
 import Docente from '../View/Paginas/docente';
 import Estudiante from '../View/Paginas/estudiante';
 import Jefecarrera from '../View/Paginas/jefecarrera';
-import Pruebin from '../View/Paginas/pruebita';
+import Materia from '../View/Paginas/materia';
+import VDocente from '../View/Paginas/vdocente';
+import VEstudiante from '../View/Paginas/vestudiante';
+import VJefecarrera from '../View/Paginas/vjefecarrera';
 
 import LoginScreen from '../View/login/LoginScreen';
 import RegisterScreen from '../View/register/Register';
@@ -92,9 +95,27 @@ const DrawerScreen = () => {
       />
 
       <Drawer.Screen
-        name="PRUEBITA"
-        component={Pruebin}
-        options={{title: 'Crear Prueba'}}
+        name="Materia"
+        component={Materia}
+        options={{title: 'Crear Materia'}}
+      />
+
+      <Drawer.Screen
+        name="VDocente"
+        component={VDocente}
+        options={{title: 'Ver Docente'}}
+      />
+
+      <Drawer.Screen
+        name="VEstudiante"
+        component={VEstudiante}
+        options={{title: 'Ver Estudiante'}}
+      />
+
+      <Drawer.Screen
+        name="VJefecarrera"
+        component={VJefecarrera}
+        options={{title: 'Ver Jefe de Carrera'}}
       />
 
     </Drawer.Navigator>

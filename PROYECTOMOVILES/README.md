@@ -89,7 +89,7 @@ La siguiente imagen enseña el drawer con lo anterior mencionado:
 ![View6](./assets/drawer1.jpeg) 
 
 
-### Creación de docente, estudiante, jefe de Carrera
+### Creación de docente, estudiante, jefe de Carrera, materia
 
 Lo mencionado esta implementado en la parte de DrawerScreen ya anteriormente mencionado, cada uno de estos textos nos redirige una pantalla en la cual cada una de ellas tienen un formulario de registro el cual consta de :
 ```
@@ -99,7 +99,10 @@ Lo mencionado esta implementado en la parte de DrawerScreen ya anteriormente men
 -Contraseña
 -Apellido Paterno
 -Apellido Materno
-
+//
+en materia se crean
+-Materia
+-Código
 ```
 Entonces tenemos como captura la siguiente:
 
@@ -115,7 +118,33 @@ Entonces tenemos como captura la creación de usuarios en FireBase:
 
 ![View7](./assets/firebase.png) 
 
+## Ver Docente, Estudiante, Jefe Carrera
 
+Lo mencionado esta implementado en la parte de DrawerScreen ya anteriormente mencionado, cada uno de estos textos nos redirige una pantalla en la cual cada una de ellas genera una FlatList el cual recibe un arreglo de las colecctiones que se registraron en la base de datos
+
+```
+Entonces tenemos como capturas las siguientes:
+```
+
+![View8](./assets/vdoc.jpeg) 
+![View9](./assets/vest.jpeg) 
+ 
+## Conclusiones 
+
+El proyecto no se desarrollo de manera completa, debido a que este primer prototipo no agrupa todo  los requerimientos establecidos en el sistema.
+
+Demanera que se podrían agregar nuevas tecnologias para la elaboración del proyecto SysCopy.
+
+Cabe recalcar que la función principal del proyecto se baja en la comprobación de plagio en los distintos archivos publicados por los estudiantes en cada actividad creada por el usuario docente.
+
+A pesar de todo en este primer prototipo se consiguieron resultados bastantes buenos el aspecto del desarrollo.
+
+## Usuarios
+
+Como usuarios tenemos:
+Administrador:pumita@gmail.com-1234567
+
+Tomar nota que en el momento de crear un docente, estudiante y jefe de carrera este mismo se le genera una Cuenta con permiso de ingresar al sistema.
 ## Version
 
 0.1.0

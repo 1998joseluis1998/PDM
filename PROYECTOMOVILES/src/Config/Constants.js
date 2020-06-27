@@ -42,6 +42,7 @@ const strings = {
   DOCENTEBUTTON:'CREAR DOCENTE',
   ESTUDIANTEBUTTON:'CREAR ESTUDIANTE',
   JEFECARRERABUTTON:'CREAR JEFE CARRERA',
+  MATERIABUTTON:'CREAR MATERIA',
 
   //CREARPERSONAEJEMPLO
   NOMBREEJE:'Ejemplo: Jose Luis',
@@ -50,6 +51,9 @@ const strings = {
   CONTRAEJE:'Ejemplo: secreto:V',
   APELLIDOPATERNOEJE:'Ejemplo: Rodriguez',
   APELLIDOMATERNOEJE:'Ejemplo: Peredo',
+  NOMBREMATERIAEJE:'Ejemplo: Calculo I',
+  CODIGOMATERIAEJE:'Ejemplo:cal-I',
+  BUSCADOREJE:'Ejemplo:SYS123456',
 
   //CREARPERSONA
   NOMBRE:'Nombre',
@@ -58,6 +62,12 @@ const strings = {
   CONTRA:'Contraseña',
   APELLIDOPATERNO:'Apellido Paterno',
   APELLIDOMATERNO:'Apellido Materno',
+
+  //CREAR MATERIA
+  NOMBREMATERIA:'Materia',
+
+  //ASIGNAR MATERIA
+  BUSCADOR:'Buscador'
 
 
 };
